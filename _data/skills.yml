@@ -1,0 +1,8 @@
+- group: Generative AI
+  items: [LLMs & Generative Models, Multi-Agent Systems, LangChain, LangGraph, Tool Use & Function Calling, Hugging Face Transformers, vLLM, Ollama]
+
+- group: Machine Learning
+  items: [PyTorch, PyTorch Lightning, TensorFlow, Scikit-Learn, Uncertainty Quantification, Conformal Prediction, spaCy, NLTK, NumPy, Pandas]
+
+- group: Software & Tools
+  items: [Python, SQL, R, MATLAB, Java, Git, Slurm, Jupyter, Azure, Claude Code, Codex]

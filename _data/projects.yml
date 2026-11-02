@@ -1,0 +1,15 @@
+- title: Empathetic & Emotionally Intelligent Conversational Agents
+  date: Fall 2024
+  stack: [Llama 3.1, RoBERTa, LoRA]
+  description: >-
+    Built an emotion-detection model on the ESConv dataset by fine-tuning
+    RoBERTa, then fine-tuned Llama 3.1 8B to generate empathetic,
+    emotionally aware dialogue.
+
+- title: Reproducing Nano-GPT for Language Generation
+  date: Fall 2024
+  stack: [PyTorch Lightning, Transformers, Multi-GPU]
+  description: >-
+    Re-implemented a nano GPT model from scratch with PyTorch Lightning and
+    multi-GPU training, trained on Shakespearean text for character-level
+    language generation.

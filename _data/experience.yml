@@ -1,0 +1,37 @@
+- org: NSF AI Institute for Advances in Optimization (AI4OPT)
+  org_url: https://www.ai4opt.org/
+  role: Graduate Research Assistant
+  dates: Jan 2024 – Present
+  location: Atlanta, GA
+  projects:
+    - title: Uncertainty Quantification & Risk Control for LLMs
+      dates: Jan 2025 – Present
+      points:
+        - Enabled LLM medical-consultation systems to request more information or commit to a diagnosis with statistical guarantees, via risk-controlled stopping policies evaluated over 1,600 simulated consultations.
+        - Synthesized 100+ papers into a survey on Conformal Prediction for Generative AI, covering free-form generation, reasoning, interactive systems and multimodal models.
+        - Provided statistical guarantees on factuality risk in LLM-generated chest X-ray reports with Conformal Prediction methods.
+    - title: Conversational AI for Automated Cognitive Assessment
+      dates: Jan 2025 – Present
+      points:
+        - Automated realistic clinician–patient cognitive assessments with a multi-agent conversational pipeline (Llama 3.3, OpenAI API) spanning 50+ questions per conversation.
+        - Scaled evaluation to 500 synthetic patient personas through controlled persona generation, in collaboration with the Emory Department of Neurology.
+        - Reached 80%+ scoring accuracy, exceeding previously reported clinician accuracy, with realism validated by neurologists.
+    - title: Multimodal E-commerce Feature Extraction & Retrieval
+      dates: Sep 2024 – Present
+      points:
+        - Automated structured product-attribute extraction across a 100,000+ product catalog with specialized language models such as NuExtract v1.5.
+        - Delivered multimodal product retrieval across text and images using CLIP and Google multimodal embeddings.
+    - title: ML-Assisted Package Delivery Planning
+      dates: Jan 2024 – Dec 2024
+      points:
+        - Automated a manual package-delivery planning workflow with an ML framework combining Conformal Prediction and tabular foundation models (TabPFN, TabICL).
+        - Achieved 90%+ predictive accuracy while cutting planning decision time by ~10×, enabling confidence-aware operational recommendations.
+
+- org: Hopia
+  org_url: https://hopia.eu/en/
+  role: Optimization Research Intern
+  dates: Jan 2023 – Jun 2023
+  location: Paris, France
+  points:
+    - Automated hospital staff scheduling by formulating a Mixed-Integer Linear Program and complementary heuristics in Gurobi.
+    - Reduced scheduling constraint violations by 30% versus baselines; the approach was deployed in the product.

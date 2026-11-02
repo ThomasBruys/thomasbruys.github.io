@@ -1,0 +1,32 @@
+title: Thomas Bruys
+description: >-
+  Ph.D. student at Georgia Tech developing trustworthy, confidence-aware AI
+  systems for healthcare and supply chain applications.
+author: Thomas Bruys
+lang: en
+url: "https://thomasbruys.github.io"
+baseurl: ""   # overridden at build time by the GitHub Pages workflow
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+  sourcemap: never
+
+social:
+  name: Thomas Bruys
+  links:
+    - https://github.com/ThomasBruys
+    - https://www.linkedin.com/in/thomas-bruys-17a3861b8/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github

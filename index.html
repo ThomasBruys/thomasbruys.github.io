@@ -1,0 +1,229 @@
+---
+layout: default
+---
+{%- assign p = site.data.profile -%}
+
+<section class="hero" id="about">
+  <div class="container hero-grid">
+    <div class="hero-photo reveal">
+      <img src="{{ p.photo | relative_url }}" alt="Portrait of {{ p.name }}" width="600" height="800">
+    </div>
+
+    <div class="hero-text reveal">
+      <p class="eyebrow">{{ p.role }}</p>
+      <h1>{{ p.name }}</h1>
+      <p class="tagline">{{ p.tagline }}</p>
+
+      <p class="affil">
+        <a href="{{ p.affiliation_url }}" target="_blank" rel="noopener">{{ p.affiliation }}</a>
+        <span class="dot" aria-hidden="true">·</span>
+        <a href="{{ p.lab_url }}" target="_blank" rel="noopener">AI4OPT</a>
+        <span class="dot" aria-hidden="true">·</span>
+        <span class="muted">{% include icon.html name="pin" %} {{ p.location }}</span>
+      </p>
+
+      <div class="bio">
+        <p>{{ p.bio }}</p>
+        <p>{{ p.bio_more }}</p>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ p.cv | relative_url }}" target="_blank" rel="noopener">
+          {% include icon.html name="file" %} Download CV
+        </a>
+        <ul class="social">
+          {%- for link in p.links %}
+          <li><a class="icon-btn" href="{{ link.url }}" aria-label="{{ link.name }}" title="{{ link.name }}" {% unless link.url contains 'mailto' %}target="_blank" rel="noopener"{% endunless %}>{% include icon.html name=link.icon %}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="hero-meta reveal">
+      <div class="interests">
+        <h2 class="mini-title">Research interests</h2>
+        <ul class="chips">
+          {%- for i in p.interests %}<li>{{ i }}</li>{% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="publications">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-num">01</span>
+      <h2>Publications</h2>
+      <a class="section-link" href="https://scholar.google.com/citations?user=Zh65ZqkAAAAJ" target="_blank" rel="noopener">Google Scholar {% include icon.html name="arrow" %}</a>
+    </header>
+    <ol class="pubs">
+      {%- for pub in site.data.publications %}
+      <li class="pub reveal">
+        <div class="pub-figure{% unless pub.figure %} pub-figure-empty{% endunless %}">
+          {%- if pub.figure %}
+          <a href="{{ pub.figure | relative_url }}" target="_blank" rel="noopener" aria-label="Open full-size figure">
+            <img src="{{ pub.figure | relative_url }}" alt="{{ pub.figure_alt }}" loading="lazy">
+          </a>
+          {%- else %}
+          <span class="pub-figure-soon">{% include icon.html name="rocket" %}<span>Preview coming soon</span></span>
+          {%- endif %}
+        </div>
+        <div class="pub-body">
+        <h3 class="pub-title">
+          {%- if pub.links and pub.links[0] -%}
+          <a href="{{ pub.links[0].url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+          {%- else -%}{{ pub.title }}{%- endif -%}
+        </h3>
+        <p class="pub-authors">
+          {%- for a in pub.authors -%}
+          {%- if a == "T. Bruys" %}<strong class="me">{{ a }}</strong>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}
+          {%- endfor -%}
+        </p>
+        <p class="pub-venue">{% if pub.upcoming %}<span class="badge">{{ pub.venue }}</span>{% else %}{{ pub.venue }}{% endif %}</p>
+        {%- if pub.summary %}
+        <p class="pub-summary">{{ pub.summary }}</p>
+        {%- endif %}
+        <div class="pub-foot">
+          <ul class="tags">{% for t in pub.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+          {%- for l in pub.links %}
+          <a class="pill-link" href="{{ l.url }}" target="_blank" rel="noopener">{% if l.icon %}{% include icon.html name=l.icon %} {{ l.name }}{% else %}{{ l.name }} {% include icon.html name="arrow" %}{% endif %}</a>
+          {%- endfor %}
+        </div>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section alt" id="experience">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-num">02</span>
+      <h2>Experience</h2>
+    </header>
+
+    {%- for job in site.data.experience %}
+    <article class="job reveal">
+      <div class="job-head">
+        <div>
+          <h3><a href="{{ job.org_url }}" target="_blank" rel="noopener">{{ job.org }}</a></h3>
+          <p class="job-role">{{ job.role }}</p>
+        </div>
+        <p class="job-when">{{ job.dates }}<br><span class="muted">{{ job.location }}</span></p>
+      </div>
+
+      {%- if job.projects %}
+      <ol class="timeline">
+        {%- for proj in job.projects %}
+        <li>
+          <div class="tl-head">
+            <h4>{{ proj.title }}</h4>
+            {%- if proj.deployed %}<span class="badge" title="Deployed in production by an industrial partner">{% include icon.html name="rocket" %} In production</span>{% endif %}
+            <span class="tl-date">{{ proj.dates }}</span>
+          </div>
+          <ul class="points">
+            {%- for pt in proj.points %}<li>{{ pt }}</li>{% endfor %}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ol>
+      {%- endif %}
+
+      {%- if job.points %}
+      <ul class="points">
+        {%- for pt in job.points %}<li>{{ pt }}</li>{% endfor %}
+      </ul>
+      {%- endif %}
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-num">03</span>
+      <h2>Selected projects</h2>
+    </header>
+    <div class="cards">
+      {%- for proj in site.data.projects %}
+      <article class="card reveal">
+        <p class="card-date">{{ proj.date }}</p>
+        <h3>{{ proj.title }}</h3>
+        <p>{{ proj.description }}</p>
+        <ul class="tags">{% for t in proj.stack %}<li>{{ t }}</li>{% endfor %}</ul>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="teaching">
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="section-num">04</span>
+      <h2>Teaching &amp; mentoring</h2>
+    </header>
+    <div class="cards">
+      {%- for t in site.data.teaching %}
+      <article class="card reveal">
+        <p class="card-date">{{ t.dates }}</p>
+        <h3><a class="title-link" href="{{ t.url }}" target="_blank" rel="noopener">{{ t.program }} {% include icon.html name="arrow" %}</a></h3>
+        <p class="card-role">{{ t.role }}</p>
+        <p>{{ t.description }}</p>
+        {%- if t.highlights %}
+        <ul class="points">
+          {%- for h in t.highlights %}<li>{{ h }}</li>{% endfor %}
+        </ul>
+        {%- endif %}
+        {%- if t.reach %}<p class="card-reach">{{ t.reach }}</p>{% endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="container two-col">
+    <div>
+      <header class="section-head reveal">
+        <span class="section-num">05</span>
+        <h2>Education</h2>
+      </header>
+      <ul class="edu">
+        {%- for e in site.data.education %}
+        <li class="reveal">
+          <h3>{{ e.school }}</h3>
+          <p>{{ e.degree }}</p>
+          <p class="muted small">{{ e.dates }} · {{ e.location }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div id="skills">
+      <header class="section-head reveal">
+        <span class="section-num">06</span>
+        <h2>Skills</h2>
+      </header>
+      {%- for g in site.data.skills %}
+      <div class="skill-group reveal">
+        <h3 class="mini-title">{{ g.group }}</h3>
+        <ul class="chips chips-quiet">{% for i in g.items %}<li>{{ i }}</li>{% endfor %}</ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section contact">
+  <div class="container contact-inner reveal">
+    <h2>Let's talk</h2>
+    <p>I'm always happy to chat about uncertainty quantification, trustworthy LLMs, or applying AI in healthcare and operations.</p>
+    <a class="btn btn-primary" href="mailto:thomas.bruys@gatech.edu">{% include icon.html name="mail" %} thomas.bruys@gatech.edu</a>
+  </div>
+</section>

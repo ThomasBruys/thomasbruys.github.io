@@ -1,0 +1,51 @@
+name: Thomas Bruys
+role: Ph.D. Student · Electrical & Computer Engineering
+affiliation: Georgia Institute of Technology
+affiliation_url: https://www.gatech.edu/
+lab: NSF AI Institute for Advances in Optimization (AI4OPT)
+lab_url: https://www.ai4opt.org/
+location: Atlanta, GA
+photo: /assets/img/Photo_profile_thomas.jpg
+cv: /static/uploads/CV_Thomas_Bruys.pdf
+
+tagline: >-
+  Building trustworthy, confidence-aware AI for large-scale, real-world systems.
+
+bio: >-
+  I'm a third-year Ph.D. student in Electrical and Computer Engineering at
+  Georgia Tech and a Graduate Research Assistant at
+  <a href="https://www.ai4opt.org/">AI4OPT</a>. My research focuses on making
+  AI systems <strong>know when they don't know</strong>: I develop
+  uncertainty-quantification and conformal-prediction methods that give
+  statistical guarantees to large language models, multi-agent systems and deep
+  learning pipelines deployed in <strong>healthcare</strong> and
+  <strong>supply chain</strong> settings.
+
+bio_more: >-
+  Before Georgia Tech, I earned a Master's of Engineering in Computer Science
+  from IMT Atlantique in France and worked on hospital staff-scheduling
+  optimization at Hopia in Paris.
+
+interests:
+  - Uncertainty Quantification
+  - Conformal Prediction
+  - Risk Control
+  - Large Language Models
+  - Multi-Agent Systems
+  - AI for Healthcare
+  - ML for Supply Chain
+
+
+links:
+  - name: Email
+    icon: mail
+    url: mailto:thomas.bruys@gatech.edu
+  - name: Google Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?user=Zh65ZqkAAAAJ
+  - name: GitHub
+    icon: github
+    url: https://github.com/ThomasBruys
+  - name: LinkedIn
+    icon: linkedin
+    url: https://www.linkedin.com/in/thomas-bruys-17a3861b8/

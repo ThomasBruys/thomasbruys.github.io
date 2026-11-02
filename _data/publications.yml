@@ -1,0 +1,70 @@
+# "T. Bruys" is highlighted automatically in author lists.
+# `figure` is the paper's main figure (shown beside the summary); omit it to show a placeholder.
+- title: "ChatCog: A Multi-Agent LLM-Powered Framework for Uncertainty-Aware Cognitive Testing"
+  authors: [T. Bruys, L. Liu, A. Breithaupt, A. Levey, R. Zandehshahvar, P. Van Hentenryck]
+  venue: Coming soon
+  upcoming: true
+  summary: >-
+    A multi-agent conversational AI framework that automates clinician–patient
+    cognitive assessments. Developed with the Emory Department of Neurology and
+    evaluated on 500 synthetic patient personas, ChatCog scores assessments with
+    over 80% accuracy, exceeding previously reported clinician accuracy, with
+    conversation realism validated by neurologists.
+  tags: [LLM Agents, Healthcare, Uncertainty Quantification]
+
+- title: "CoCoNet: Convex Conformal Network for Multi-dimensional Uncertainty Regions"
+  authors: [A. Moradi, T. Bruys, R. Zandehshahvar, P. Van Hentenryck]
+  venue: Preprint
+  figure: /assets/img/papers/coconet.jpg
+  figure_alt: "CoCoNet overview: an input-convex network learns a conformity score, which is calibrated into a multi-dimensional prediction region."
+  summary: >-
+    Conformal prediction guarantees coverage, but how tight its prediction
+    regions are depends on the conformity score, which is especially hard to
+    choose when several outputs are correlated. CoCoNet learns convex conformity
+    scores (via piecewise-linear splines or Input Convex Neural Networks) that
+    adapt the region's shape to the data, while split-conformal calibration
+    keeps finite-sample guarantees. Across 30 regression tasks with 2–16
+    outputs, it produces the most efficient regions, ranking first on 22.
+  tags: [Conformal Prediction, Deep Learning]
+  links:
+    - name: PDF
+      url: https://arxiv.org/pdf/2610.24246
+    - name: GitHub
+      icon: github
+      url: https://github.com/AI4OPT/CoCoNet
+
+- title: "Toward Reliable Generative AI with Conformal Prediction: A Survey"
+  authors: [T. Bruys, S. Cheng, A. Moradi, R. Zandehshahvar, P. Van Hentenryck]
+  venue: Preprint
+  figure: /assets/img/papers/cp-genai-survey.jpg
+  figure_alt: "Yearly number of arXiv papers on conformal prediction, split into generative AI, theoretical and other work, showing rapid growth since 2023."
+  summary: >-
+    A survey of how conformal prediction can give generative AI systems
+    statistically valid uncertainty estimates. It synthesizes 100+ papers
+    spanning free-form text generation, reasoning, interactive and agentic
+    systems, and multimodal models, organizing the field and highlighting open
+    challenges for building reliable generative models.
+  tags: [Survey, Generative AI, Conformal Prediction]
+  links:
+    - name: PDF
+      url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6963618
+    - name: GitHub
+      icon: github
+      url: https://github.com/AI4OPT/conformal-prediction-generative-ai
+
+- title: "Confidence-Aware Deep Learning for Load Plan Adjustments in the Parcel Service Industry"
+  authors: [T. Bruys, R. Zandehshahvar, A. Hijazi, P. Van Hentenryck]
+  venue: Presented at AAAI 2025 and INFORMS 2025
+  figure: /assets/img/papers/loadplan.jpg
+  figure_alt: "Two-stage framework: embedded load and building data feed neural networks whose predictions are turned into conformal prediction sets."
+  summary: >-
+    Automates inbound load-plan adjustments for a large parcel carrier using a
+    two-stage approach: deep learning first makes tactical predictions, then
+    refines them with the latest operational data. Conformal prediction adds
+    confidence-aware prediction sets so planners know when to trust each
+    recommendation. The framework showed high accuracy in its initial
+    deployment in production.
+  tags: [Conformal Prediction, Supply Chain, Deployed]
+  links:
+    - name: PDF
+      url: https://arxiv.org/pdf/2411.17502
